@@ -73,7 +73,6 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
 
   const categories: { id: 'all' | ServiceCategory; label: string; count: number }[] = [
     { id: 'all', label: 'Semua Foto', count: PORTFOLIO_ITEMS.length },
-    { id: 'konsep', label: 'Konsep Servis', count: PORTFOLIO_ITEMS.filter(i => i.category === 'konsep').length },
     { id: 'bumbung', label: 'Bumbung', count: PORTFOLIO_ITEMS.filter(i => i.category === 'bumbung').length },
     { id: 'besi', label: 'Besi & Kimpalan', count: PORTFOLIO_ITEMS.filter(i => i.category === 'besi').length },
     { id: 'cat', label: 'Mengecat', count: PORTFOLIO_ITEMS.filter(i => i.category === 'cat').length },
@@ -88,13 +87,13 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
       <section className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-[#0E4424] text-sm font-bold border border-emerald-100">
           <Camera className="w-4 h-4 text-[#15803D]" />
-          <span>Galeri Kerja & Visual Servis HME</span>
+          <span>Gambar Tapak Kerja HME</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-black text-gray-900 tracking-tight font-sans">
-          Portfolio Projek & Servis
+          Portfolio Projek Sebenar
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-          Gabungan foto tapak kerja HME dan satu visual konsep servis untuk memudahkan pelanggan melihat skop kerja pembinaan, bumbung, kimpalan, mengecat, jalan, saliran dan kemasan rumah.
+          Foto tapak kerja HME yang memaparkan skop pembinaan, bumbung, kimpalan, mengecat, jalan, saliran dan kemasan rumah.
         </p>
       </section>
 
@@ -198,7 +197,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
               </div>
 
               {/* Card Meta Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div className="p-5 flex-1 flex flex-col">
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs text-gray-500 font-mono">
                     <span>Kod Fail: {item.code}</span>
@@ -210,27 +209,6 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {item.caption}
                   </p>
-                </div>
-
-                <div className="pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
-                  <button
-                    onClick={() => setLightboxIndex(globalIndex)}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-800 hover:text-[#15803D] transition-colors focus:outline-hidden focus-visible:underline"
-                  >
-                    <Maximize2 className="w-4 h-4 text-[#15803D]" />
-                    <span>Perincian Foto</span>
-                  </button>
-
-                  <a
-                    href={getWhatsAppUrl(`Salam HME, saya ingin bertanya tentang projek kerja seperti dalam foto portfolio kod [${item.code}] (${item.title}).`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#15803D] hover:text-[#0E4424] hover:underline"
-                    aria-label={`WhatsApp HME mengenai projek ${item.code}`}
-                  >
-                    <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                    <span>Tanya Projek Ini</span>
-                  </a>
                 </div>
               </div>
             </article>

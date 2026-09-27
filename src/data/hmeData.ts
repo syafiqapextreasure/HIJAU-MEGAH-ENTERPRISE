@@ -171,17 +171,6 @@ export const SERVICES: ServiceItem[] = [
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
-    id: 'konsep-servis',
-    code: 'HME-01',
-    title: 'Visual Gabungan Servis HME',
-    category: 'konsep',
-    categoryLabel: 'Konsep Servis',
-    caption: 'Visual konsep yang menggambarkan gabungan perkhidmatan pembinaan, landskap dan homestay HME dalam satu suasana kemas.',
-    imageSrc: '/images/portfolio/hme-01-konsep-servis.webp',
-    webpSrc: '/images/portfolio/hme-01-konsep-servis.webp',
-    status: 'Visual Konsep'
-  },
-  {
     id: 'bumbung-02',
     code: 'HME-02',
     title: 'Kerangka Kayu Bumbung di Tapak',
