@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageRoute } from '../types';
-import { CONTACT_INFO, SERVICES, PORTFOLIO_ITEMS, WORK_PROCESS_STEPS, FAQS, getWhatsAppUrl } from '../data/hmeData';
+import { CONTACT_INFO, SERVICES, ORDERED_PORTFOLIO_ITEMS, WORK_PROCESS_STEPS, FAQS, getWhatsAppUrl } from '../data/hmeData';
 import { EnquiryForm } from '../components/EnquiryForm';
 import { 
   ArrowRight, 
@@ -26,7 +26,7 @@ interface UtamaPageProps {
 
 export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox }) => {
   // Selected original project photos for the home preview
-  const previewPhotos = PORTFOLIO_ITEMS.slice(0, 6);
+  const previewPhotos = ORDERED_PORTFOLIO_ITEMS.slice(0, 6);
 
   const scrollToEnquiry = () => {
     const el = document.getElementById('borang-sebut-harga');
@@ -437,7 +437,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                 Galeri Projek Sebenar HME
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mt-1 max-w-2xl">
-                Sorotan daripada 19 foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur dan longkang.
+                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur dan longkang.
               </p>
             </div>
 
@@ -448,7 +448,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
               }}
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gray-900 hover:bg-gray-800 text-white font-bold text-base transition-colors self-start md:self-end min-h-[48px]"
             >
-              <span>Lihat Semua 19 Foto</span>
+              <span>Lihat Semua {ORDERED_PORTFOLIO_ITEMS.length} Foto</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -488,7 +488,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                     {photo.caption}
                   </p>
                   <p className="text-xs text-gray-600 mt-1.5 flex items-center justify-between">
-                    <span>Kod Fail: {photo.code}</span>
+                    <span>{photo.code}</span>
                     <span className="text-[#15803D] font-bold">Buka Gambar →</span>
                   </p>
                 </div>

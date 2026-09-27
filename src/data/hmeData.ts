@@ -469,6 +469,15 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   }
 ];
 
+export const ORDERED_PORTFOLIO_ITEMS: PortfolioItem[] = [...PORTFOLIO_ITEMS].sort((a, b) => {
+  const statusOrder: Record<PortfolioItem['status'], number> = {
+    'Sedang Berjalan': 0,
+    Siap: 1,
+  };
+
+  return statusOrder[a.status] - statusOrder[b.status];
+});
+
 export const WORK_PROCESS_STEPS = [
   {
     step: '01',

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useId } from 'react';
 import { PageRoute, ServiceCategory, PortfolioItem } from '../types';
-import { PORTFOLIO_ITEMS, getWhatsAppUrl, CONTACT_INFO } from '../data/hmeData';
+import { ORDERED_PORTFOLIO_ITEMS, getWhatsAppUrl } from '../data/hmeData';
 import { 
   Camera, 
   X, 
@@ -30,13 +30,13 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
 
   // Filter items
   const filteredItems = activeFilter === 'all'
-    ? PORTFOLIO_ITEMS
-    : PORTFOLIO_ITEMS.filter((item) => item.category === activeFilter);
+    ? ORDERED_PORTFOLIO_ITEMS
+    : ORDERED_PORTFOLIO_ITEMS.filter((item) => item.category === activeFilter);
 
   // If an initialPhotoCode was passed, open lightbox for it on mount
   useEffect(() => {
     if (initialPhotoCode) {
-      const idx = PORTFOLIO_ITEMS.findIndex((p) => p.code === initialPhotoCode);
+      const idx = ORDERED_PORTFOLIO_ITEMS.findIndex((p) => p.code === initialPhotoCode);
       if (idx !== -1) {
         setLightboxIndex(idx);
       }
@@ -50,9 +50,9 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
     if (e.key === 'Escape') {
       setLightboxIndex(null);
     } else if (e.key === 'ArrowRight') {
-      setLightboxIndex((prev) => (prev !== null ? (prev + 1) % PORTFOLIO_ITEMS.length : null));
+      setLightboxIndex((prev) => (prev !== null ? (prev + 1) % ORDERED_PORTFOLIO_ITEMS.length : null));
     } else if (e.key === 'ArrowLeft') {
-      setLightboxIndex((prev) => (prev !== null ? (prev - 1 + PORTFOLIO_ITEMS.length) % PORTFOLIO_ITEMS.length : null));
+      setLightboxIndex((prev) => (prev !== null ? (prev - 1 + ORDERED_PORTFOLIO_ITEMS.length) % ORDERED_PORTFOLIO_ITEMS.length : null));
     }
   }, [lightboxIndex]);
 
@@ -69,16 +69,16 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
     };
   }, [lightboxIndex, handleKeyDown]);
 
-  const currentLightboxItem = lightboxIndex !== null ? PORTFOLIO_ITEMS[lightboxIndex] : null;
+  const currentLightboxItem = lightboxIndex !== null ? ORDERED_PORTFOLIO_ITEMS[lightboxIndex] : null;
 
   const categories: { id: 'all' | ServiceCategory; label: string; count: number }[] = [
-    { id: 'all', label: 'Semua Foto', count: PORTFOLIO_ITEMS.length },
-    { id: 'bumbung', label: 'Bumbung', count: PORTFOLIO_ITEMS.filter(i => i.category === 'bumbung').length },
-    { id: 'besi', label: 'Besi & Kimpalan', count: PORTFOLIO_ITEMS.filter(i => i.category === 'besi').length },
-    { id: 'cat', label: 'Mengecat', count: PORTFOLIO_ITEMS.filter(i => i.category === 'cat').length },
-    { id: 'jalan', label: 'Jalan & Tar', count: PORTFOLIO_ITEMS.filter(i => i.category === 'jalan').length },
-    { id: 'dapur', label: 'Dapur & Sinki', count: PORTFOLIO_ITEMS.filter(i => i.category === 'dapur').length },
-    { id: 'longkang', label: 'Longkang', count: PORTFOLIO_ITEMS.filter(i => i.category === 'longkang').length },
+    { id: 'all', label: 'Semua Foto', count: ORDERED_PORTFOLIO_ITEMS.length },
+    { id: 'bumbung', label: 'Bumbung', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'bumbung').length },
+    { id: 'besi', label: 'Besi & Kimpalan', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'besi').length },
+    { id: 'cat', label: 'Mengecat', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'cat').length },
+    { id: 'jalan', label: 'Jalan & Tar', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'jalan').length },
+    { id: 'dapur', label: 'Dapur & Sinki', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'dapur').length },
+    { id: 'longkang', label: 'Longkang', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'longkang').length },
   ];
 
   return (
@@ -105,7 +105,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
             <span>Kategori Kerja:</span>
           </div>
           <span className="text-xs sm:text-sm font-medium text-gray-500">
-            Menunjukkan {filteredItems.length} daripada {PORTFOLIO_ITEMS.length} foto projek
+            Menunjukkan {filteredItems.length} daripada {ORDERED_PORTFOLIO_ITEMS.length} foto projek
           </span>
         </div>
 
@@ -140,7 +140,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
       {/* Photo Gallery Grid */}
       <section aria-label="Senarai Foto Projek" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {filteredItems.map((item) => {
-          const globalIndex = PORTFOLIO_ITEMS.findIndex(p => p.id === item.id);
+          const globalIndex = ORDERED_PORTFOLIO_ITEMS.findIndex(p => p.id === item.id);
           return (
             <article
               key={item.id}
@@ -200,7 +200,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
               <div className="p-5 flex-1 flex flex-col">
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs text-gray-500 font-mono">
-                    <span>Kod Fail: {item.code}</span>
+                    <span>{item.code}</span>
                     <span className="text-[#15803D] font-bold font-sans">{item.categoryLabel}</span>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug group-hover:text-[#15803D] transition-colors">
@@ -244,7 +244,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
                 {currentLightboxItem.categoryLabel}
               </span>
               <span className="text-xs sm:text-sm font-mono text-gray-300">
-                Kod: {currentLightboxItem.code} ({lightboxIndex + 1} / {PORTFOLIO_ITEMS.length})
+                {currentLightboxItem.code} ({lightboxIndex + 1} / {ORDERED_PORTFOLIO_ITEMS.length})
               </span>
             </div>
 
@@ -268,7 +268,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
             <button
               onClick={() =>
                 setLightboxIndex(
-                  (lightboxIndex - 1 + PORTFOLIO_ITEMS.length) % PORTFOLIO_ITEMS.length
+                  (lightboxIndex - 1 + ORDERED_PORTFOLIO_ITEMS.length) % ORDERED_PORTFOLIO_ITEMS.length
                 )
               }
               className="absolute left-2 sm:left-4 z-10 p-3 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all min-h-[48px] min-w-[48px] flex items-center justify-center backdrop-blur-xs focus:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-400"
@@ -292,7 +292,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
             {/* Next Button */}
             <button
               onClick={() =>
-                setLightboxIndex((lightboxIndex + 1) % PORTFOLIO_ITEMS.length)
+                setLightboxIndex((lightboxIndex + 1) % ORDERED_PORTFOLIO_ITEMS.length)
               }
               className="absolute right-2 sm:right-4 z-10 p-3 rounded-full bg-black/60 hover:bg-black/80 text-white transition-all min-h-[48px] min-w-[48px] flex items-center justify-center backdrop-blur-xs focus:outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-400"
               aria-label="Foto seterusnya"
