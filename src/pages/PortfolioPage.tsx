@@ -10,9 +10,7 @@ import {
   Maximize2, 
   Filter, 
   CheckCircle2, 
-  Clock, 
-  Info,
-  ExternalLink
+  Clock
 } from 'lucide-react';
 
 interface PortfolioPageProps {
@@ -199,10 +197,6 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
               {/* Card Meta Content */}
               <div className="p-5 flex-1 flex flex-col">
                 <div className="space-y-1.5">
-                  <div className="flex items-center justify-between text-xs text-gray-500 font-mono">
-                    <span>{item.code}</span>
-                    <span className="text-[#15803D] font-bold font-sans">{item.categoryLabel}</span>
-                  </div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-snug group-hover:text-[#15803D] transition-colors">
                     {item.title}
                   </h3>
@@ -214,19 +208,6 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
             </article>
           );
         })}
-      </section>
-
-      {/* Reassurance Banner */}
-      <section className="bg-emerald-50/80 border border-emerald-200/90 rounded-2xl p-6 sm:p-8 flex items-start gap-4">
-        <Info className="w-6 h-6 text-[#15803D] shrink-0 mt-0.5" />
-        <div className="space-y-1.5 text-left">
-          <h4 className="font-bold text-[#0E4424] text-base sm:text-lg">
-            Galeri Tersusun Mengikut Kategori Kerja
-          </h4>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            Setiap imej disusun mengikut kategori kerja yang sesuai dan diberikan penerangan khusus berdasarkan kandungan visual. Semua paparan portfolio menggunakan saiz fail seragam 1200×900 supaya grid kelihatan kemas dan konsisten.
-          </p>
-        </div>
       </section>
 
       {/* FULL-IMAGE LIGHTBOX MODAL */}

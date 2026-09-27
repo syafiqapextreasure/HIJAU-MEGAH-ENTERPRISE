@@ -487,8 +487,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                   <p className="text-sm font-semibold text-gray-800 leading-snug group-hover:text-[#15803D] transition-colors">
                     {photo.caption}
                   </p>
-                  <p className="text-xs text-gray-600 mt-1.5 flex items-center justify-between">
-                    <span>{photo.code}</span>
+                  <p className="text-xs text-gray-600 mt-1.5 flex items-center justify-end">
                     <span className="text-[#15803D] font-bold">Buka Gambar →</span>
                   </p>
                 </div>
