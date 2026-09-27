@@ -38,7 +38,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
   return (
     <div className="space-y-20 sm:space-y-28 pb-16">
       {/* HERO SECTION */}
-      <section className="relative isolate pt-32 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
+      <section className="relative isolate pt-40 pb-16 lg:pt-44 lg:pb-24 overflow-hidden">
         {/* Fullwidth Panoramic Background Image (Construction, Landscape & Homestay) */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <img
