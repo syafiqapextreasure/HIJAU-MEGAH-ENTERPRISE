@@ -7,6 +7,7 @@ export type PageRoute =
   | 'homestay';
 
 export type ServiceCategory = 
+  | 'konsep'
   | 'bumbung' 
   | 'besi' 
   | 'cat' 
@@ -33,7 +34,7 @@ export interface PortfolioItem {
   caption: string;
   imageSrc: string;
   webpSrc: string;
-  status: 'Sedang Berjalan' | 'Siap';
+  status: 'Sedang Berjalan' | 'Siap' | 'Visual Konsep';
 }
 
 export interface FaqItem {

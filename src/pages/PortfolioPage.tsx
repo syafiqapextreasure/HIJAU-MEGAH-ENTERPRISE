@@ -72,7 +72,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
   const currentLightboxItem = lightboxIndex !== null ? PORTFOLIO_ITEMS[lightboxIndex] : null;
 
   const categories: { id: 'all' | ServiceCategory; label: string; count: number }[] = [
-    { id: 'all', label: 'Semua Projek', count: PORTFOLIO_ITEMS.length },
+    { id: 'all', label: 'Semua Foto', count: PORTFOLIO_ITEMS.length },
+    { id: 'konsep', label: 'Konsep Servis', count: PORTFOLIO_ITEMS.filter(i => i.category === 'konsep').length },
     { id: 'bumbung', label: 'Bumbung', count: PORTFOLIO_ITEMS.filter(i => i.category === 'bumbung').length },
     { id: 'besi', label: 'Besi & Kimpalan', count: PORTFOLIO_ITEMS.filter(i => i.category === 'besi').length },
     { id: 'cat', label: 'Mengecat', count: PORTFOLIO_ITEMS.filter(i => i.category === 'cat').length },
@@ -87,13 +88,13 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
       <section className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-[#0E4424] text-sm font-bold border border-emerald-100">
           <Camera className="w-4 h-4 text-[#15803D]" />
-          <span>Gambar Asli Tapak Kerja HME</span>
+          <span>Galeri Kerja & Visual Servis HME</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-black text-gray-900 tracking-tight font-sans">
-          Portfolio Projek Sebenar
+          Portfolio Projek & Servis
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-          Dokumentasi fotografi asal di tapak kerja fizikal yang dikendalikan oleh Hijau Megah Enterprise. Memaparkan keadaan sebelum, semasa dan selepas pelaksanaan tanpa pengubahan digital.
+          Gabungan foto tapak kerja HME dan satu visual konsep servis untuk memudahkan pelanggan melihat skop kerja pembinaan, bumbung, kimpalan, mengecat, jalan, saliran dan kemasan rumah.
         </p>
       </section>
 
@@ -166,9 +167,9 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
                     src={item.imageSrc}
                     alt={item.caption}
                     className="w-full h-full object-contain p-1 group-hover:scale-102 transition-transform duration-300"
-                    loading="lazy"
-                    width={1286}
-                    height={960}
+                    loading="eager"
+                    width={1200}
+                    height={900}
                   />
                 </picture>
 
@@ -242,10 +243,10 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
         <Info className="w-6 h-6 text-[#15803D] shrink-0 mt-0.5" />
         <div className="space-y-1.5 text-left">
           <h4 className="font-bold text-[#0E4424] text-base sm:text-lg">
-            Keaslian Kerja & Dokumentasi Tapak Projek
+            Galeri Tersusun Mengikut Kategori Kerja
           </h4>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            Semua gambar di halaman ini adalah gambar asal kerja fizikal yang dikendalikan oleh Hijau Megah Enterprise. Penerangan merujuk kepada aktiviti kerja sebenar yang kelihatan di dalam foto (termasuk status kerja sedang berjalan atau siap), tanpa sebarang rekaan maklumat atau suntingan berlebihan.
+            Setiap imej disusun mengikut kategori kerja yang sesuai dan diberikan penerangan khusus berdasarkan kandungan visual. Semua paparan portfolio menggunakan saiz fail seragam 1200×900 supaya grid kelihatan kemas dan konsisten.
           </p>
         </div>
       </section>

@@ -25,8 +25,8 @@ interface UtamaPageProps {
 }
 
 export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox }) => {
-  // Selected original project photos for the home preview (a diverse selection across bumbung, jalan, cat, dapur, besi)
-  const previewPhotos = PORTFOLIO_ITEMS.slice(0, 6);
+  // Selected original project photos for the home preview (exclude the concept visual used only in Portfolio)
+  const previewPhotos = PORTFOLIO_ITEMS.filter((item) => item.category !== 'konsep').slice(0, 6);
 
   const scrollToEnquiry = () => {
     const el = document.getElementById('borang-sebut-harga');
