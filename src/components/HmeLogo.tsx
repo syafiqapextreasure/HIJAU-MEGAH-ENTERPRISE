@@ -14,13 +14,16 @@ export const HmeLogo: React.FC<HmeLogoProps> = ({
   showTagline = true,
 }) => {
   const isWhite = variant === 'white';
+  const markSrc = isWhite
+    ? '/images/branding/hme-mark-white.png'
+    : '/images/branding/hme-mark-draft-2.png';
 
   return (
     <div className={`inline-flex items-center gap-3 sm:gap-3.5 select-none ${className}`}>
       {/* Original HME geometric mark from supplied Image 1 only; text labels remain live HTML below. */}
       <div className={`relative shrink-0 ${size === 'sm' ? 'w-11 h-11' : size === 'lg' ? 'w-18 h-18' : 'w-14 h-14'}`}>
         <img
-          src="/images/branding/hme-mark-draft-2.png"
+          src={markSrc}
           alt=""
           aria-hidden="true"
           className="h-full w-full object-contain drop-shadow-xs"
@@ -64,12 +67,14 @@ export const HmeLogo: React.FC<HmeLogoProps> = ({
         {showTagline && (
           <div className="mt-1">
             <span
-              className={`inline-block font-extrabold tracking-tight rounded-md shadow-xs ${
+              className={`inline-block whitespace-nowrap font-extrabold tracking-tight rounded-md shadow-xs ${
                 isWhite
                   ? 'bg-white text-[#0F172A]'
                   : 'bg-[#B0F016] text-[#0A2612]'
               } ${
-                size === 'sm'
+                isWhite
+                  ? 'px-2 py-0.5 text-[10px] sm:text-[11px]'
+                  : size === 'sm'
                   ? 'px-2.5 py-0.5 text-[11px]'
                   : size === 'lg'
                   ? 'px-3.5 py-1 text-[14px] sm:text-[15px]'

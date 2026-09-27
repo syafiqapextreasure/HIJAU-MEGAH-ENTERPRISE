@@ -2,19 +2,11 @@ import React, { useState } from 'react';
 import { PageRoute } from '../types';
 import { CONTACT_INFO, HOMESTAY_HIGHLIGHTS, getHomestayWhatsAppUrl } from '../data/hmeData';
 import { 
-  Building2, 
   MessageCircle, 
   Calendar, 
-  Users, 
   MapPin, 
-  Send, 
-  Info, 
-  AlertCircle,
   CloudSun,
-  Home,
-  Bed,
-  CheckCircle2,
-  Sparkles
+  CheckCircle2
 } from 'lucide-react';
 
 interface HomestayPageProps {
@@ -84,38 +76,18 @@ export const HomestayPage: React.FC<HomestayPageProps> = ({ onNavigate }) => {
         </p>
       </section>
 
-      {/* Prominent Transparency Note */}
-      <section className="bg-amber-50/90 border border-amber-200/90 rounded-2xl p-6 sm:p-7 flex items-start gap-4 shadow-xs">
-        <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
-        <div className="space-y-1.5 text-left">
-          <h4 className="font-bold text-amber-950 text-base sm:text-lg">
-            Nota Ketelusan Foto & Ketersediaan Unit
-          </h4>
-          <p className="text-sm sm:text-base text-amber-900 leading-relaxed">
-            Semua gambar penginapan pada halaman ini dilabel sebagai <strong>“Ilustrasi AI — bukan foto unit sebenar”</strong>. Imej konsep ini disediakan untuk menggambarkan suasana percutian tanah tinggi dan tidak mewakili reka letak perabot, bilangan bilik atau pemandangan unit yang tepat.
-          </p>
-          <p className="text-sm sm:text-base text-amber-900 leading-relaxed font-semibold pt-1">
-            👉 Sila hubungi pihak pengurusan HME melalui WhatsApp untuk mendapatkan foto unit sebenar, kadar sewaan terkini dan semakan ketersediaan tarikh percutian anda.
-          </p>
-        </div>
-      </section>
-
       {/* Main Concept Showcase */}
       <section className="bg-white rounded-3xl overflow-hidden border border-gray-200/80 shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[440px] overflow-hidden bg-gray-100">
             <img
               src="/images/homestay/homestay-cameron-exterior.webp"
-              alt="Ilustrasi konsep bangunan apartmen Cameron Highlands berlatar bukit teh berkabus"
+              alt="Konsep bangunan apartmen Cameron Highlands berlatar bukit teh berkabus"
               className="w-full h-full object-cover"
               loading="eager"
               width={1280}
               height={720}
             />
-            {/* Obligatory label */}
-            <div className="absolute top-4 left-4 bg-black/75 backdrop-blur-md text-white text-xs px-3 py-1 rounded-md font-semibold tracking-wide border border-white/20">
-              Ilustrasi AI — bukan foto unit sebenar
-            </div>
           </div>
 
           <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5">
@@ -168,12 +140,9 @@ export const HomestayPage: React.FC<HomestayPageProps> = ({ onNavigate }) => {
               Visual Konsep
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-gray-900 font-sans tracking-tight">
-              Galeri Ilustrasi Konsep Homestay
+              Galeri Konsep Homestay
             </h2>
           </div>
-          <span className="text-xs text-amber-700 font-bold bg-amber-50 px-3 py-1 rounded-md border border-amber-200">
-            *Setiap gambar adalah ilustrasi AI
-          </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -191,10 +160,6 @@ export const HomestayPage: React.FC<HomestayPageProps> = ({ onNavigate }) => {
                   width={800}
                   height={600}
                 />
-                {/* MANDATORY LABEL ON EVERY IMAGE */}
-                <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white text-[11px] px-2.5 py-1 rounded-md font-semibold tracking-wide border border-white/20">
-                  Ilustrasi AI — bukan foto unit sebenar
-                </div>
               </div>
 
               <div className="p-5 flex-1 flex flex-col justify-between space-y-2">

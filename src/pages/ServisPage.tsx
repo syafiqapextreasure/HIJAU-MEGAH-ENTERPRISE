@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-import { PageRoute, ServiceItem } from '../types';
-import { SERVICES, getWhatsAppUrl, CONTACT_INFO } from '../data/hmeData';
+import { PageRoute } from '../types';
+import { SERVICES, getWhatsAppUrl } from '../data/hmeData';
 import { EnquiryForm } from '../components/EnquiryForm';
 import { 
   MessageCircle, 
-  CheckCircle2, 
-  ArrowRight, 
-  Wrench, 
-  HelpCircle,
-  Sparkles,
-  Info
+  CheckCircle2,
+  Wrench
 } from 'lucide-react';
 
 interface ServisPageProps {
@@ -59,17 +55,13 @@ export const ServisPage: React.FC<ServisPageProps> = ({ onNavigate }) => {
                   <div className="relative aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 w-full overflow-hidden bg-gray-100 group">
                     <img
                       src={service.image}
-                      alt={`Ilustrasi servis ${service.title} bagi persekitaran kediaman di Malaysia`}
+                      alt={`${service.title} bagi persekitaran kediaman di Malaysia`}
                       className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                       loading="lazy"
                       width={800}
                       height={600}
                     />
 
-                    {/* Discrete label as mandated */}
-                    <div className="absolute top-4 left-4 bg-black/65 backdrop-blur-md text-white/95 text-xs px-3 py-1 rounded-md font-medium tracking-wide">
-                      Ilustrasi servis
-                    </div>
                   </div>
                 </div>
 
@@ -129,29 +121,6 @@ export const ServisPage: React.FC<ServisPageProps> = ({ onNavigate }) => {
         })}
       </section>
 
-      {/* Verification Notice */}
-      <section className="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-6 sm:p-8 flex items-start gap-4">
-        <Info className="w-6 h-6 text-[#15803D] shrink-0 mt-0.5" />
-        <div className="space-y-1">
-          <h4 className="font-bold text-[#0E4424] text-base">
-            Keterangan Ketelusan Ilustrasi & Projek Sebenar
-          </h4>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-            Visual pada kad servis di atas merupakan ilustrasi skop perkhidmatan (discreetly labeled “Ilustrasi servis”). Bagi melihat hasil kerja dan keadaan sebenar di tapak projek fizikal yang dikendalikan oleh HME, sila layari halaman Portfolio untuk menyemak kesemua 19 foto asal.
-          </p>
-          <div className="pt-2">
-            <button
-              onClick={() => {
-                onNavigate('portfolio');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="text-sm font-bold text-[#15803D] hover:text-[#0E4424] underline"
-            >
-              Buka Galeri Portfolio Sebenar →
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* Embedded Enquiry Form */}
       <section id="borang-sebut-harga" className="max-w-4xl mx-auto scroll-mt-28">

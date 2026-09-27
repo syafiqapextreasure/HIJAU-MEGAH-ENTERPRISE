@@ -78,8 +78,7 @@ export const LANDSCAPE_SERVICES = [
 
 export const HOMESTAY_HIGHLIGHTS = {
   LOCATION: 'Cameron Highlands, Pahang, Malaysia',
-  SETTING: 'Apartmen percutian dalam suasana pergunungan yang sejuk, nyaman dan segar dikelilingi kehijauan bukit.',
-  NOTE: 'Setiap imej yang dipaparkan adalah konsep ilustrasi AI. Sila hubungi HME di WhatsApp untuk mendapatkan maklumat unit sebenar, ketersediaan tarikh dan sebut harga kadar sewaan.'
+  SETTING: 'Apartmen percutian dalam suasana pergunungan yang sejuk, nyaman dan segar dikelilingi kehijauan bukit.'
 };
 
 

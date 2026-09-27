@@ -97,9 +97,6 @@ export const LandskapPage: React.FC<LandskapPageProps> = ({ onNavigate }) => {
               width={1280}
               height={720}
             />
-            <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white/95 text-xs px-3 py-1 rounded-md font-medium">
-              Ilustrasi landskap HME
-            </div>
           </div>
 
           <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5">
@@ -198,7 +195,7 @@ export const LandskapPage: React.FC<LandskapPageProps> = ({ onNavigate }) => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#15803D]">
-              Galeri Ilustrasi
+              Galeri Landskap
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-gray-900 font-sans tracking-tight">
               Inspirasi Suasana Laman Tropika
@@ -239,9 +236,6 @@ export const LandskapPage: React.FC<LandskapPageProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
-                <div className="pt-2 text-xs font-semibold text-[#15803D]">
-                  Ilustrasi landskap tropika
-                </div>
               </div>
             </div>
           ))}

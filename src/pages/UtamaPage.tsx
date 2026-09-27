@@ -122,17 +122,12 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white group">
                   <img
                     src="/images/servis/servis-bumbung.webp"
-                    alt="Ilustrasi kerja pemasangan bumbung logam merah kemas oleh pekerja di tapak kediaman Malaysia"
+                    alt="Kerja pemasangan bumbung logam merah kemas di tapak kediaman Malaysia"
                     className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
                     width={800}
                     height={600}
                     loading="eager"
                   />
-                  {/* Subtle label as requested */}
-                  <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white/90 text-xs px-2.5 py-1 rounded-md font-medium tracking-wide">
-                    Ilustrasi servis
-                  </div>
-
                   {/* Floating Highlight Card */}
                   <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-gray-100 flex items-center justify-between">
                     <div>
@@ -170,32 +165,56 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
 
       {/* SHORT COMPANY INTRODUCTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-white to-emerald-50/40 rounded-3xl p-8 sm:p-12 lg:p-14 border border-emerald-100/80 shadow-md">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-sm font-extrabold uppercase tracking-wider text-[#15803D]">
-              Pengenalan Syarikat
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 font-sans tracking-tight">
-              Mengenai Hijau Megah Enterprise (HME)
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed font-normal">
-              Hijau Megah Enterprise (HME) beroperasi dengan fokus utama terhadap pelaksanaan kerja-kerja pembinaan, pembaikan, dan penyelenggaraan hartanah yang teliti dan praktikal. Dari struktur bumbung yang melindungi kediaman daripada cuaca basah, kimpalan rangka besi, pengecatan dinding, penurapan tar jalan, sehinggalah pembaikan ruang dalaman seperti dapur dan sistem longkang saliran air hujan.
-            </p>
-            <p className="text-base text-gray-600 leading-relaxed">
-              Mengekalkan moto <span className="font-semibold text-gray-800">“Construction | Landscape | Homestay”</span>, kami mengutamakan perbincangan telus mengikut keperluan sebenar tapak anda tanpa sebarang janji berlebihan.
-            </p>
+        <div className="bg-gradient-to-br from-white to-emerald-50/40 rounded-3xl p-8 sm:p-12 lg:p-14 border border-emerald-100/80 shadow-md overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-4">
+              <span className="text-sm font-extrabold uppercase tracking-wider text-[#15803D]">
+                Pengenalan Syarikat
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black text-gray-900 font-sans tracking-tight">
+                Mengenai Hijau Megah Enterprise (HME)
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed font-normal">
+                Hijau Megah Enterprise (HME) beroperasi dengan fokus utama terhadap pelaksanaan kerja-kerja pembinaan, pembaikan, dan penyelenggaraan hartanah yang teliti dan praktikal. Dari struktur bumbung yang melindungi kediaman daripada cuaca basah, kimpalan rangka besi, pengecatan dinding, penurapan tar jalan, sehinggalah pembaikan ruang dalaman seperti dapur dan sistem longkang saliran air hujan.
+              </p>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Mengekalkan moto <span className="font-semibold text-gray-800">“Construction | Landscape | Homestay”</span>, kami mengutamakan perbincangan telus mengikut keperluan sebenar tapak anda tanpa sebarang janji berlebihan.
+              </p>
 
-            <div className="pt-2">
-              <button
-                onClick={() => {
-                  onNavigate('tentang');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="inline-flex items-center gap-2 text-base font-bold text-[#15803D] hover:text-[#0E4424] hover:underline transition-colors"
-              >
-                <span>Ketahui lebih lanjut mengenai skop HME</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+              <div className="pt-2">
+                <button
+                  onClick={() => {
+                    onNavigate('tentang');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="inline-flex items-center gap-2 text-base font-bold text-[#15803D] hover:text-[#0E4424] hover:underline transition-colors"
+                >
+                  <span>Ketahui lebih lanjut mengenai skop HME</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative rounded-3xl overflow-hidden border border-white/80 shadow-xl bg-emerald-950 min-h-[320px]">
+                <img
+                  src="/images/branding/hme-service-landscape-homestay.webp"
+                  alt="Rumah kediaman dengan kerja baik pulih, taman landskap dan suasana homestay tanah tinggi"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  width={900}
+                  height={600}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2013]/80 via-[#0A2013]/10 to-transparent" />
+                <div className="absolute left-5 right-5 bottom-5 rounded-2xl bg-white/92 backdrop-blur-md p-4 shadow-lg">
+                  <p className="text-xs font-black uppercase tracking-wider text-[#15803D]">
+                    Construction | Landscape | Homestay
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-gray-800 leading-relaxed">
+                    Satu identiti perkhidmatan untuk pembaikan hartanah, susun atur laman dan suasana penginapan yang kemas.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -238,15 +257,12 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
               <div className="relative h-56 overflow-hidden bg-gray-100">
                 <img
                   src={service.image}
-                  alt={`Ilustrasi servis ${service.title}`}
+                  alt={`${service.title} untuk persekitaran kediaman Malaysia`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   width={600}
                   height={450}
                 />
-                <div className="absolute top-2.5 left-2.5 bg-black/60 backdrop-blur-md text-white/90 text-[11px] px-2 py-0.5 rounded font-medium">
-                  Ilustrasi servis
-                </div>
               </div>
 
               {/* Service Content */}
@@ -368,9 +384,6 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
               <div className="absolute top-3 left-3 bg-[#0E4424] text-white text-xs px-3 py-1 rounded-md font-bold flex items-center gap-1.5 shadow-xs">
                 <Building2 className="w-3.5 h-3.5 text-[#BEF264]" />
                 <span>Cameron Highlands, Pahang</span>
-              </div>
-              <div className="absolute bottom-3 left-3 bg-black/75 backdrop-blur-md text-white text-[11px] px-2 py-0.5 rounded font-medium">
-                Ilustrasi AI — bukan foto unit sebenar
               </div>
             </div>
 

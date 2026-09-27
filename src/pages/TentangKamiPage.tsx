@@ -1,17 +1,9 @@
 import React from 'react';
 import { PageRoute } from '../types';
-import { CONTACT_INFO, getWhatsAppUrl } from '../data/hmeData';
-import { HmeLogo } from '../components/HmeLogo';
+import { getWhatsAppUrl } from '../data/hmeData';
 import { 
-  Hammer, 
-  Wrench, 
-  Paintbrush, 
-  Truck, 
-  Droplet, 
-  Layers, 
   MessageCircle, 
   CheckCircle,
-  HelpCircle,
   Info
 } from 'lucide-react';
 
@@ -68,38 +60,54 @@ export const TentangKamiPage: React.FC<TentangKamiPageProps> = ({ onNavigate }) 
             </div>
           </div>
 
-          <div className="lg:col-span-5 flex flex-col items-center justify-center p-8 bg-gradient-to-b from-[#F8FAF9] to-emerald-50/50 rounded-2xl border border-gray-100 text-center space-y-6">
-            <HmeLogo variant="color" size="lg" />
-            <div className="border-t border-gray-200/80 w-full pt-4 space-y-2 text-left">
-              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
-                Fokus Utama Syarikat:
+          <div className="lg:col-span-5">
+            <div className="relative overflow-hidden rounded-3xl border border-emerald-100 bg-gradient-to-br from-white via-emerald-50/70 to-[#F8FAF9] p-6 sm:p-7 shadow-lg">
+              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-[#B0F016]/25 blur-3xl" />
+              <div className="relative space-y-6">
+                <div className="flex items-center gap-4 text-left">
+                  <img
+                    src="/images/branding/hme-mark-draft-2.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="h-16 w-16 shrink-0 object-contain"
+                    width={96}
+                    height={96}
+                  />
+                  <div className="min-w-0">
+                    <div className="text-4xl sm:text-5xl font-black tracking-[0.08em] text-[#0F172A] leading-none">
+                      HME
+                    </div>
+                    <div className="mt-1 text-base sm:text-lg font-black uppercase tracking-wide text-[#0F172A] leading-tight">
+                      Hijau Megah Enterprise
+                    </div>
+                  </div>
+                </div>
+
+                <div className="inline-flex max-w-full rounded-xl bg-[#B0F016] px-3 py-2 text-[12px] sm:text-[13px] font-extrabold leading-tight text-[#0A2612] shadow-xs whitespace-nowrap">
+                  Construction | Landscape | Homestay
+                </div>
+
+                <div className="rounded-2xl border border-emerald-100 bg-white/85 p-5 text-left shadow-xs">
+                  <div className="text-xs font-black uppercase tracking-wider text-[#15803D]">
+                    Fokus Utama Syarikat
+                  </div>
+                  <div className="mt-4 grid grid-cols-1 gap-3 text-sm font-semibold text-gray-700">
+                    {[
+                      'Kerja Atap & Bumbung',
+                      'Fabrikasi Besi & Kimpalan',
+                      'Pengecatan Bangunan',
+                      'Penurapan Jalan Tar Premix',
+                      'Pembaikan Dapur, Jubin & Sinki',
+                      'Pemasangan Longkang Konkrit U-Drain'
+                    ].map((item) => (
+                      <div key={item} className="flex items-start gap-2.5">
+                        <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#15803D]" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <ul className="text-sm text-gray-700 space-y-1.5 font-medium">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
-                  <span>Kerja Atap & Bumbung (Roofing)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
-                  <span>Fabrikasi Besi & Kimpalan</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
-                  <span>Pengecatan Bangunan Luar & Dalam</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
-                  <span>Penurapan Jalan Tar Premix</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
-                  <span>Pembaikan Dapur, Jubin & Sinki</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
-                  <span>Pemasangan Longkang Konkrit U-Drain</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
