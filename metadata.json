@@ -1,0 +1,6 @@
+{
+  "name": "HME - HIJAU MEGAH ENTERPRISE",
+  "description": "Laman web rasmi HME - Hijau Megah Enterprise. Kontraktor pembinaan, pembaikan dan penyelenggaraan hartanah profesional di Malaysia. Bumbung, kimpalan besi, mengecat, jalan tar, dapur & longkang.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
