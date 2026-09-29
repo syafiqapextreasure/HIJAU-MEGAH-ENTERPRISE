@@ -19,9 +19,9 @@ export const HmeLogo: React.FC<HmeLogoProps> = ({
     : '/images/branding/hme-mark-draft-2.png';
 
   return (
-    <div className={`inline-flex items-center gap-3 sm:gap-3.5 select-none ${className}`}>
+    <div className={`inline-flex items-center gap-2 sm:gap-3.5 select-none ${className}`}>
       {/* Original HME geometric mark from supplied Image 1 only; text labels remain live HTML below. */}
-      <div className={`relative shrink-0 ${size === 'sm' ? 'w-11 h-11' : size === 'lg' ? 'w-18 h-18' : 'w-14 h-14'}`}>
+      <div className={`relative shrink-0 ${size === 'sm' ? 'w-11 h-11 max-[360px]:w-9 max-[360px]:h-9' : size === 'lg' ? 'w-18 h-18' : 'w-14 h-14'}`}>
         <img
           src={markSrc}
           alt=""
@@ -39,7 +39,7 @@ export const HmeLogo: React.FC<HmeLogoProps> = ({
             className={`font-black tracking-wider ${
               isWhite ? 'text-white' : 'text-[#0F172A]'
             } ${
-              size === 'sm' ? 'text-2xl' : size === 'lg' ? 'text-4xl' : 'text-3xl'
+              size === 'sm' ? 'text-2xl max-[360px]:text-xl' : size === 'lg' ? 'text-4xl' : 'text-3xl'
             }`}
             style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
           >
@@ -53,7 +53,7 @@ export const HmeLogo: React.FC<HmeLogoProps> = ({
             isWhite ? 'text-white/95' : 'text-[#0F172A]'
           } ${
             size === 'sm'
-              ? 'text-[12px] sm:text-[13px] tracking-wide'
+              ? 'text-[12px] max-[360px]:text-[10px] sm:text-[13px] tracking-wide'
               : size === 'lg'
               ? 'text-[18px] sm:text-[20px] tracking-wide'
               : 'text-[14px] sm:text-[15.5px] tracking-wide'
@@ -75,7 +75,7 @@ export const HmeLogo: React.FC<HmeLogoProps> = ({
                 isWhite
                   ? 'px-2 py-0.5 text-[10px] sm:text-[11px]'
                   : size === 'sm'
-                  ? 'px-2.5 py-0.5 text-[11px]'
+                  ? 'px-2.5 py-0.5 text-[11px] max-[360px]:px-1.5 max-[360px]:text-[9px]'
                   : size === 'lg'
                   ? 'px-3.5 py-1 text-[14px] sm:text-[15px]'
                   : 'px-2.5 py-0.5 sm:px-3 sm:py-1 text-[12px] sm:text-[13px]'

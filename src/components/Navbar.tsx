@@ -54,11 +54,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Brand Logo - Isolated Full-Color Logo */}
           <button
             onClick={() => handleLinkClick('utama')}
-            className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#15803D] rounded-lg p-0.5 transition-transform hover:opacity-95 shrink-0"
+            className="flex items-center text-left focus:outline-hidden focus-visible:ring-2 focus-visible:ring-[#15803D] rounded-lg p-0.5 transition-transform hover:opacity-95 shrink-0 min-w-0"
             aria-label="Kembali ke Laman Utama HME - HIJAU MEGAH ENTERPRISE"
           >
-            <HmeLogo variant="color" size="sm" className="sm:hidden" />
-            <HmeLogo variant="color" size="md" className="hidden sm:inline-flex" />
+            <span className="inline-flex sm:hidden">
+              <HmeLogo variant="color" size="sm" />
+            </span>
+            <span className="hidden sm:inline-flex">
+              <HmeLogo variant="color" size="md" />
+            </span>
           </button>
 
           {/* Desktop Navigation Links (Switches to Hamburger on Tablet < xl to prevent crowding) */}
@@ -98,18 +102,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </a>
           </div>
 
-          {/* Mobile & Tablet Hamburger Button (< xl) */}
+          {/* Mobile & Tablet Hamburger Button (< xl). WhatsApp remains available in the drawer and floating button on phones. */}
           <div className="flex xl:hidden items-center gap-2">
-            <a
-              href={getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sm:hidden inline-flex items-center justify-center p-2 rounded-lg bg-[#15803D] text-white active:scale-95 transition-all min-h-[40px] min-w-[40px]"
-              aria-label="WhatsApp Kami"
-            >
-              <MessageCircle className="w-4 h-4" />
-            </a>
-
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
