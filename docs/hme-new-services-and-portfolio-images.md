@@ -12,16 +12,16 @@ Generated with `gpt-image-2-high` via the configured OpenAI image generator on 2
 
 ## Attached portfolio source photos
 
-The ten user-attached images were converted into `hme-29.webp` through `hme-38.webp` and reorganized into the user's requested tabs: Pemasangan Meter Air, Pemasangan Meter Elektrik, and Wiring & Piping. Labels remain based only on visible image analysis. No client, location, date or project identity was inferred.
+The ten user-attached images were converted into `hme-29.webp` through `hme-38.webp` and rechecked and corrected so visible paip/piping photos are not labelled as Pemasangan Meter Air. No visible water meter appears in the supplied photos; Meter Air remains a requested tab/category but currently has no portfolio photo from this batch. Labels remain based only on visible image analysis. No client, location, date or project identity was inferred.
 
 | Attachment | Public asset | Visible grouping |
 | --- | --- | --- |
-| 01 | `/images/portfolio/hme-29.webp` | Pemasangan Meter Air |
-| 02 | `/images/portfolio/hme-30.webp` | Pemasangan Meter Air |
-| 03 | `/images/portfolio/hme-31.webp` | Pemasangan Meter Air |
-| 04 | `/images/portfolio/hme-32.webp` | Pemasangan Meter Air |
-| 05 | `/images/portfolio/hme-33.webp` | Pemasangan Meter Air |
-| 06 | `/images/portfolio/hme-34.webp` | Pemasangan Meter Air |
+| 01 | `/images/portfolio/hme-29.webp` | Wiring & Piping (visible paip/piping, not meter air) |
+| 02 | `/images/portfolio/hme-30.webp` | Wiring & Piping (visible paip/piping, not meter air) |
+| 03 | `/images/portfolio/hme-31.webp` | Wiring & Piping (visible paip/piping, not meter air) |
+| 04 | `/images/portfolio/hme-32.webp` | Wiring & Piping (visible paip/piping, not meter air) |
+| 05 | `/images/portfolio/hme-33.webp` | Wiring & Piping (visible paip/piping, not meter air) |
+| 06 | `/images/portfolio/hme-34.webp` | Wiring & Piping (visible paip/piping, not meter air) |
 | 07 | `/images/portfolio/hme-35.webp` | Wiring & Piping |
 | 08 | `/images/portfolio/hme-36.webp` | Wiring & Piping |
 | 09 | `/images/portfolio/hme-37.webp` | Wiring & Piping |
