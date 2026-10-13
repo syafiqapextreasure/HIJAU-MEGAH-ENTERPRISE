@@ -77,7 +77,8 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
     { id: 'jalan', label: 'Jalan & Tar', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'jalan').length },
     { id: 'dapur', label: 'Dapur & Sinki', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'dapur').length },
     { id: 'longkang', label: 'Longkang', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'longkang').length },
-    { id: 'air-elektrik', label: 'Air & Elektrik', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'air-elektrik').length },
+    { id: 'meter-air', label: 'Pemasangan Meter Air', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'meter-air').length },
+    { id: 'meter-elektrik', label: 'Pemasangan Meter Elektrik', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'meter-elektrik').length },
     { id: 'wiring-piping', label: 'Wiring & Piping', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'wiring-piping').length },
   ];
 
@@ -93,7 +94,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
           Portfolio Projek Sebenar
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-          Foto tapak kerja HME yang disusun mengikut kategori kerja seperti bumbung, kimpalan, mengecat, jalan, saliran, wiring, piping, air dan elektrik.
+          Foto tapak kerja HME yang disusun mengikut kategori kerja seperti bumbung, kimpalan, mengecat, jalan, saliran, pemasangan meter air, pemasangan meter elektrik, wiring dan piping.
         </p>
       </section>
 

@@ -15,6 +15,8 @@ export type ServiceCategory =
   | 'longkang'
   | 'meter'
   | 'air-elektrik'
+  | 'meter-air'
+  | 'meter-elektrik'
   | 'wiring-piping';
 
 export interface ServiceItem {

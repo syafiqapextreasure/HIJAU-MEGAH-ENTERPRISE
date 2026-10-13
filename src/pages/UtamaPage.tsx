@@ -437,7 +437,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                 Galeri Projek Sebenar HME
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mt-1 max-w-2xl">
-                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur, longkang, air, elektrik, wiring dan piping.
+                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur, longkang, pemasangan meter air, pemasangan meter elektrik, wiring dan piping.
               </p>
             </div>
 

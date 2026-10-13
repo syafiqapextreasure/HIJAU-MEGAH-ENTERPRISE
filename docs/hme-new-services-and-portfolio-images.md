@@ -12,17 +12,17 @@ Generated with `gpt-image-2-high` via the configured OpenAI image generator on 2
 
 ## Attached portfolio source photos
 
-The ten user-attached images were converted into `hme-29.webp` through `hme-38.webp` and labelled only from visible image analysis. No client, location, date or project identity was inferred.
+The ten user-attached images were converted into `hme-29.webp` through `hme-38.webp` and reorganized into the user's requested tabs: Pemasangan Meter Air, Pemasangan Meter Elektrik, and Wiring & Piping. Labels remain based only on visible image analysis. No client, location, date or project identity was inferred.
 
 | Attachment | Public asset | Visible grouping |
 | --- | --- | --- |
-| 01 | `/images/portfolio/hme-29.webp` | Paip luar / wiring-piping |
-| 02 | `/images/portfolio/hme-30.webp` | Fitting paip / wiring-piping |
-| 03 | `/images/portfolio/hme-31.webp` | Sambungan paip luar / wiring-piping |
-| 04 | `/images/portfolio/hme-32.webp` | Paip dan penyambung / wiring-piping |
-| 05 | `/images/portfolio/hme-33.webp` | Penyambungan paip tanah / wiring-piping |
-| 06 | `/images/portfolio/hme-34.webp` | Paip dalam laluan tanah / wiring-piping |
-| 07 | `/images/portfolio/hme-35.webp` | Konduit siling / air-elektrik |
-| 08 | `/images/portfolio/hme-36.webp` | Konduit siling dalaman / air-elektrik |
-| 09 | `/images/portfolio/hme-37.webp` | Konduit dan lampu siling / air-elektrik |
-| 10 | `/images/portfolio/hme-38.webp` | Papan kawalan dan konduit / air-elektrik |
+| 01 | `/images/portfolio/hme-29.webp` | Pemasangan Meter Air |
+| 02 | `/images/portfolio/hme-30.webp` | Pemasangan Meter Air |
+| 03 | `/images/portfolio/hme-31.webp` | Pemasangan Meter Air |
+| 04 | `/images/portfolio/hme-32.webp` | Pemasangan Meter Air |
+| 05 | `/images/portfolio/hme-33.webp` | Pemasangan Meter Air |
+| 06 | `/images/portfolio/hme-34.webp` | Pemasangan Meter Air |
+| 07 | `/images/portfolio/hme-35.webp` | Wiring & Piping |
+| 08 | `/images/portfolio/hme-36.webp` | Wiring & Piping |
+| 09 | `/images/portfolio/hme-37.webp` | Wiring & Piping |
+| 10 | `/images/portfolio/hme-38.webp` | Pemasangan Meter Elektrik |
