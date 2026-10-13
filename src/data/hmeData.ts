@@ -166,6 +166,48 @@ export const SERVICES: ServiceItem[] = [
       'Pencegahan takungan air di tepi bangunan'
     ],
     ctaMessage: 'Salam HME, saya berminat dengan perkhidmatan pemasangan Longkang & Saliran.'
+  },
+  {
+    id: 'meter',
+    title: 'Pemasangan Meter Baru',
+    shortDesc: 'Kerja pemasangan dan penyusunan meter baharu untuk keperluan air atau elektrik mengikut keadaan tapak.',
+    fullDesc: 'Menyediakan kerja pemasangan meter baharu dan penyusunan laluan sambungan yang kemas untuk kediaman atau premis, tertakluk kepada semakan tapak dan keperluan pihak utiliti berkaitan.',
+    image: '/images/servis/servis-meter-baru.webp',
+    features: [
+      'Pemasangan kotak dan laluan meter baharu',
+      'Penyediaan paip atau konduit sambungan',
+      'Kemasan pemasangan pada dinding luar',
+      'Semakan skop mengikut keadaan tapak'
+    ],
+    ctaMessage: 'Salam HME, saya ingin bertanya mengenai pemasangan meter baru untuk rumah/premis saya.'
+  },
+  {
+    id: 'air-elektrik',
+    title: 'Air & Elektrik',
+    shortDesc: 'Kerja asas sambungan air dan elektrik seperti paip, konduit, kotak suis dan kemasan laluan servis.',
+    fullDesc: 'Khidmat kerja penyelenggaraan dan pemasangan asas bagi laluan air dan elektrik, termasuk penyusunan paip, konduit, sambungan kemas dan pemeriksaan tapak sebelum kerja dilaksanakan.',
+    image: '/images/servis/servis-air-elektrik.webp',
+    features: [
+      'Kerja laluan paip air dan sambungan asas',
+      'Susunan konduit elektrik yang kemas',
+      'Pemeriksaan titik sambungan di tapak',
+      'Perbincangan skop mengikut keperluan premis'
+    ],
+    ctaMessage: 'Salam HME, saya ingin berbincang mengenai kerja Air & Elektrik di rumah/premis saya.'
+  },
+  {
+    id: 'wiring-piping',
+    title: 'Wiring & Piping',
+    shortDesc: 'Penyusunan pendawaian dan laluan paip untuk kerja dalaman atau luaran secara kemas dan praktikal.',
+    fullDesc: 'Kerja wiring dan piping untuk laluan dinding, siling atau kawasan luar, dengan fokus pada susunan yang kemas, mudah diselenggara dan sesuai dengan keadaan sebenar tapak.',
+    image: '/images/servis/servis-wiring-piping.webp',
+    features: [
+      'Pendawaian dalam konduit yang tersusun',
+      'Pemasangan laluan paip air atau servis',
+      'Kerja siling, dinding dan kawasan luar',
+      'Kemasan laluan mengikut keadaan tapak'
+    ],
+    ctaMessage: 'Salam HME, saya berminat untuk mendapatkan sebut harga kerja Wiring & Piping.'
   }
 ];
 
@@ -466,6 +508,116 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     imageSrc: '/images/portfolio/hme-28.webp',
     webpSrc: '/images/portfolio/hme-28.webp',
     status: 'Siap'
+  },
+  {
+    id: 'wiring-piping-29',
+    code: 'HME-29',
+    title: 'Laluan Paip di Lantai Luar',
+    category: 'wiring-piping',
+    categoryLabel: 'Wiring & Piping',
+    caption: 'Paip biru dan hitam disusun di kawasan lantai luar.',
+    imageSrc: '/images/portfolio/hme-29.webp',
+    webpSrc: '/images/portfolio/hme-29.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'wiring-piping-30',
+    code: 'HME-30',
+    title: 'Sambungan Paip dan Fitting',
+    category: 'wiring-piping',
+    categoryLabel: 'Wiring & Piping',
+    caption: 'Fitting paip sedang dipegang berhampiran laluan paip luar.',
+    imageSrc: '/images/portfolio/hme-30.webp',
+    webpSrc: '/images/portfolio/hme-30.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'wiring-piping-31',
+    code: 'HME-31',
+    title: 'Kerja Sambungan Paip Luar',
+    category: 'wiring-piping',
+    categoryLabel: 'Wiring & Piping',
+    caption: 'Kerja pada sambungan paip dilakukan di kawasan lantai dan tanah luar.',
+    imageSrc: '/images/portfolio/hme-31.webp',
+    webpSrc: '/images/portfolio/hme-31.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'wiring-piping-32',
+    code: 'HME-32',
+    title: 'Paip dan Penyambung di Tapak',
+    category: 'wiring-piping',
+    categoryLabel: 'Wiring & Piping',
+    caption: 'Paip dan penyambung diletakkan berhampiran laluan pemasangan.',
+    imageSrc: '/images/portfolio/hme-32.webp',
+    webpSrc: '/images/portfolio/hme-32.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'wiring-piping-33',
+    code: 'HME-33',
+    title: 'Penyambungan Paip di Tanah',
+    category: 'wiring-piping',
+    categoryLabel: 'Wiring & Piping',
+    caption: 'Sambungan paip dibuat di kawasan tanah bersebelahan lantai konkrit.',
+    imageSrc: '/images/portfolio/hme-33.webp',
+    webpSrc: '/images/portfolio/hme-33.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'wiring-piping-34',
+    code: 'HME-34',
+    title: 'Paip Dalam Laluan Tanah',
+    category: 'wiring-piping',
+    categoryLabel: 'Wiring & Piping',
+    caption: 'Paip biru diletakkan dalam laluan tanah di tepi jalan kediaman.',
+    imageSrc: '/images/portfolio/hme-34.webp',
+    webpSrc: '/images/portfolio/hme-34.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'air-elektrik-35',
+    code: 'HME-35',
+    title: 'Laluan Konduit di Siling',
+    category: 'air-elektrik',
+    categoryLabel: 'Air & Elektrik',
+    caption: 'Konduit dipasang pada siling ruang dalaman berhampiran kipas dan lampu.',
+    imageSrc: '/images/portfolio/hme-35.webp',
+    webpSrc: '/images/portfolio/hme-35.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'air-elektrik-36',
+    code: 'HME-36',
+    title: 'Kerja Konduit Siling Dalaman',
+    category: 'air-elektrik',
+    categoryLabel: 'Air & Elektrik',
+    caption: 'Pekerja memasang laluan konduit pada siling ruang dalaman.',
+    imageSrc: '/images/portfolio/hme-36.webp',
+    webpSrc: '/images/portfolio/hme-36.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'air-elektrik-37',
+    code: 'HME-37',
+    title: 'Konduit dan Lampu Siling',
+    category: 'air-elektrik',
+    categoryLabel: 'Air & Elektrik',
+    caption: 'Konduit elektrik kelihatan tersusun pada siling bersama lampu dan kipas.',
+    imageSrc: '/images/portfolio/hme-37.webp',
+    webpSrc: '/images/portfolio/hme-37.webp',
+    status: 'Siap'
+  },
+  {
+    id: 'air-elektrik-38',
+    code: 'HME-38',
+    title: 'Papan Kawalan dan Laluan Konduit',
+    category: 'air-elektrik',
+    categoryLabel: 'Air & Elektrik',
+    caption: 'Papan kawalan kecil dan konduit dipasang pada dinding dalaman.',
+    imageSrc: '/images/portfolio/hme-38.webp',
+    webpSrc: '/images/portfolio/hme-38.webp',
+    status: 'Siap'
   }
 ];
 
@@ -475,7 +627,12 @@ export const ORDERED_PORTFOLIO_ITEMS: PortfolioItem[] = [...PORTFOLIO_ITEMS].sor
     Siap: 1,
   };
 
-  return statusOrder[a.status] - statusOrder[b.status];
+  const statusDiff = statusOrder[a.status] - statusOrder[b.status];
+  if (statusDiff !== 0) return statusDiff;
+
+  const aNumber = Number(a.code.replace(/\D/g, '')) || 0;
+  const bNumber = Number(b.code.replace(/\D/g, '')) || 0;
+  return bNumber - aNumber;
 });
 
 export const WORK_PROCESS_STEPS = [

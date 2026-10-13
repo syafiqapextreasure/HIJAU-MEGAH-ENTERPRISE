@@ -220,7 +220,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
         </div>
       </section>
 
-      {/* SIX SERVICE PREVIEWS */}
+      {/* SERVICE PREVIEWS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
@@ -228,10 +228,10 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
               Kepakaran Kerja
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 font-sans tracking-tight mt-1">
-              Enam Servis Utama HME
+              Servis Utama HME
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mt-2 max-w-2xl">
-              Penyelesaian kerja binaan dan pembaikan yang praktikal untuk kediaman dan premis anda.
+              Penyelesaian kerja binaan, pembaikan, meter, air, elektrik, wiring dan piping untuk kediaman dan premis anda.
             </p>
           </div>
 
@@ -437,7 +437,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                 Galeri Projek Sebenar HME
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mt-1 max-w-2xl">
-                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur dan longkang.
+                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur, longkang, air, elektrik, wiring dan piping.
               </p>
             </div>
 

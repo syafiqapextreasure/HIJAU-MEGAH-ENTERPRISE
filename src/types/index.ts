@@ -12,7 +12,10 @@ export type ServiceCategory =
   | 'cat' 
   | 'jalan' 
   | 'dapur' 
-  | 'longkang';
+  | 'longkang'
+  | 'meter'
+  | 'air-elektrik'
+  | 'wiring-piping';
 
 export interface ServiceItem {
   id: ServiceCategory;

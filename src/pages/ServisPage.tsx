@@ -39,7 +39,7 @@ export const ServisPage: React.FC<ServisPageProps> = ({ onNavigate }) => {
         </p>
       </section>
 
-      {/* Six Service Cards */}
+      {/* Service Cards */}
       <section className="space-y-12">
         {SERVICES.map((service, index) => {
           const isEven = index % 2 === 1;
