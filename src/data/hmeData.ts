@@ -88,7 +88,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Bumbung & Atap',
     shortDesc: 'Pemasangan atap zink dan metal deck, pembaikan kerangka kekuda bumbung, penggantian perabung serta penyelesaian masalah kebocoran.',
     fullDesc: 'Menyediakan khidmat menyeluruh bagi kerja atap kediaman dan premis, merangkumi pembinaan kerangka kayu atau besi, pemasangan kepingan atap zink / metal deck, pemasangan flashing kalis air, serta baik pulih kebocoran atap.',
-    image: '/images/servis/servis-bumbung.webp',
+    image: '/images/servis/servis-bumbung-tapak.webp',
     features: [
       'Pemasangan kepingan atap zink / metal deck',
       'Pembaikan dan penggantian kekuda bumbung',

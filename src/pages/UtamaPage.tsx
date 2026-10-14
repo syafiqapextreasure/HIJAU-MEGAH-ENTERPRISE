@@ -27,7 +27,7 @@ interface UtamaPageProps {
 export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox }) => {
   // Selected completed, full-width project photos for the home preview.
   // Keep this section showcase-focused instead of using narrow/deadspace thumbnails.
-  const landingPreviewCodes = ['HME-28', 'HME-14', 'HME-05', 'HME-37', 'HME-39', 'HME-13'];
+  const landingPreviewCodes = ['HME-28', 'HME-14', 'HME-05', 'HME-18', 'HME-46', 'HME-07'];
   const previewPhotos = landingPreviewCodes
     .map((code) => ORDERED_PORTFOLIO_ITEMS.find((photo) => photo.code === code))
     .filter((photo): photo is (typeof ORDERED_PORTFOLIO_ITEMS)[number] => Boolean(photo));
