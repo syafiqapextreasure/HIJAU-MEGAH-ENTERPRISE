@@ -24,8 +24,8 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
     'Dapur, Jubin & Sinki',
     'Longkang & Saliran',
     'Pemasangan Meter Baru',
-    'Air & Elektrik',
-    'Wiring & Piping',
+    'Paiping',
+    'Wayering',
     'Lain-lain / Pertanyaan Umum',
   ];
 

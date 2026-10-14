@@ -57,7 +57,7 @@ export const ServisPage: React.FC<ServisPageProps> = ({ onNavigate }) => {
                       src={service.image}
                       alt={`${service.title} bagi persekitaran kediaman di Malaysia`}
                       className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                      style={service.id === 'bumbung' ? { objectPosition: '60% 72%' } : undefined}
+                      style={service.id === 'bumbung' ? { objectPosition: '42% 28%' } : undefined}
                       loading="lazy"
                       width={800}
                       height={600}

@@ -77,6 +77,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
     { id: 'jalan', label: 'Jalan & Tar', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'jalan').length },
     { id: 'dapur', label: 'Dapur & Sinki', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'dapur').length },
     { id: 'longkang', label: 'Longkang', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'longkang').length },
+    { id: 'meter-air', label: 'Pemasangan Meter Air', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'meter-air').length },
     { id: 'meter-elektrik', label: 'Pemasangan Meter Elektrik', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'meter-elektrik').length },
     { id: 'paiping', label: 'Paiping', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'paiping').length },
     { id: 'wayering', label: 'Wayering', count: ORDERED_PORTFOLIO_ITEMS.filter(i => i.category === 'wayering').length },
@@ -94,7 +95,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
           Portfolio Projek Sebenar
         </h1>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-normal">
-          Foto tapak kerja HME yang disusun mengikut kategori kerja seperti bumbung, kimpalan, mengecat, jalan, saliran, pemasangan meter elektrik, paiping dan wayering.
+          Foto tapak kerja HME yang disusun mengikut kategori kerja seperti bumbung, kimpalan, mengecat, jalan, saliran, pemasangan meter air, pemasangan meter elektrik, paiping dan wayering.
         </p>
       </section>
 
@@ -147,7 +148,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
               key={item.id}
               className="bg-white rounded-2xl overflow-hidden border border-gray-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group"
             >
-              {/* Thumbnail Container: shows the FULL photograph without cropping or distortion */}
+              {/* Thumbnail Container: fills the card frame to avoid deadspace in gallery */}
               <div
                 onClick={() => setLightboxIndex(globalIndex)}
                 className="relative aspect-4/3 w-full bg-slate-950/5 flex items-center justify-center overflow-hidden cursor-pointer"
@@ -166,7 +167,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
                   <img
                     src={item.imageSrc}
                     alt={item.caption}
-                    className="w-full h-full object-contain p-1 group-hover:scale-102 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="eager"
                     width={1200}
                     height={900}

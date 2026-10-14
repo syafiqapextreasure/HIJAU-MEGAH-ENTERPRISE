@@ -1,4 +1,4 @@
-import { ServiceItem, PortfolioItem, FaqItem } from '../types';
+import { ServiceItem, PortfolioItem, FaqItem, ServiceCategory } from '../types';
 
 export const CONTACT_INFO = {
   COMPANY_NAME: 'HIJAU MEGAH ENTERPRISE',
@@ -170,44 +170,44 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'meter',
     title: 'Pemasangan Meter Baru',
-    shortDesc: 'Kerja pemasangan dan penyusunan meter baharu untuk keperluan air atau elektrik mengikut keadaan tapak.',
-    fullDesc: 'Menyediakan kerja pemasangan meter baharu dan penyusunan laluan sambungan yang kemas untuk kediaman atau premis, tertakluk kepada semakan tapak dan keperluan pihak utiliti berkaitan.',
+    shortDesc: 'Kerja pemasangan dan penyusunan meter air serta meter elektrik mengikut keadaan tapak.',
+    fullDesc: 'Menyediakan kerja pemasangan meter baharu untuk keperluan air dan elektrik, termasuk penyusunan paip, konduit dan laluan sambungan yang kemas, tertakluk kepada semakan tapak dan keperluan pihak utiliti berkaitan.',
     image: '/images/servis/servis-meter-baru.webp',
     features: [
-      'Pemasangan kotak dan laluan meter baharu',
+      'Pemasangan meter air dan meter elektrik baharu',
       'Penyediaan paip atau konduit sambungan',
-      'Kemasan pemasangan pada dinding luar',
-      'Semakan skop mengikut keadaan tapak'
+      'Kemasan pemasangan pada dinding atau tapak luar',
+      'Semakan skop mengikut keadaan tapak dan keperluan utiliti'
     ],
     ctaMessage: 'Salam HME, saya ingin bertanya mengenai pemasangan meter baru untuk rumah/premis saya.'
   },
   {
-    id: 'air-elektrik',
-    title: 'Air & Elektrik',
-    shortDesc: 'Kerja asas sambungan air dan elektrik seperti paip, konduit, kotak suis dan kemasan laluan servis.',
-    fullDesc: 'Khidmat kerja penyelenggaraan dan pemasangan asas bagi laluan air dan elektrik, termasuk penyusunan paip, konduit, sambungan kemas dan pemeriksaan tapak sebelum kerja dilaksanakan.',
-    image: '/images/servis/servis-air-elektrik.webp',
+    id: 'paiping',
+    title: 'Paiping',
+    shortDesc: 'Kerja laluan paip air, sambungan, fitting dan kemasan paip untuk kawasan luar atau dalaman.',
+    fullDesc: 'Khidmat paiping merangkumi pemasangan laluan paip air, penyambungan fitting, kerja parit atau laluan permukaan, serta kemasan sambungan mengikut keadaan sebenar tapak.',
+    image: '/images/servis/servis-paiping.webp',
     features: [
-      'Kerja laluan paip air dan sambungan asas',
-      'Susunan konduit elektrik yang kemas',
-      'Pemeriksaan titik sambungan di tapak',
-      'Perbincangan skop mengikut keperluan premis'
+      'Pemasangan laluan paip air baharu',
+      'Sambungan fitting, injap dan paip servis',
+      'Kerja parit atau laluan paip luar',
+      'Kemasan sambungan mengikut keadaan tapak'
     ],
-    ctaMessage: 'Salam HME, saya ingin berbincang mengenai kerja Air & Elektrik di rumah/premis saya.'
+    ctaMessage: 'Salam HME, saya ingin berbincang mengenai kerja Paiping di rumah/premis saya.'
   },
   {
-    id: 'wiring-piping',
-    title: 'Wiring & Piping',
-    shortDesc: 'Penyusunan pendawaian dan laluan paip untuk kerja dalaman atau luaran secara kemas dan praktikal.',
-    fullDesc: 'Kerja wiring dan piping untuk laluan dinding, siling atau kawasan luar, dengan fokus pada susunan yang kemas, mudah diselenggara dan sesuai dengan keadaan sebenar tapak.',
-    image: '/images/servis/servis-wiring-piping.webp',
+    id: 'wayering',
+    title: 'Wayering',
+    shortDesc: 'Penyusunan pendawaian, konduit, kotak suis dan laluan elektrik secara kemas dan praktikal.',
+    fullDesc: 'Kerja wayering untuk laluan dinding, siling atau kawasan dalaman, dengan fokus pada susunan konduit dan kabel yang kemas, mudah diselenggara dan sesuai dengan keadaan sebenar tapak.',
+    image: '/images/servis/servis-wayering.webp',
     features: [
       'Pendawaian dalam konduit yang tersusun',
-      'Pemasangan laluan paip air atau servis',
-      'Kerja siling, dinding dan kawasan luar',
+      'Pemasangan kotak suis dan laluan kabel',
+      'Kerja siling dan dinding dalaman',
       'Kemasan laluan mengikut keadaan tapak'
     ],
-    ctaMessage: 'Salam HME, saya berminat untuk mendapatkan sebut harga kerja Wiring & Piping.'
+    ctaMessage: 'Salam HME, saya berminat untuk mendapatkan sebut harga kerja Wayering.'
   }
 ];
 
@@ -554,17 +554,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     status: 'Sedang Berjalan'
   },
   {
-    id: 'paiping-33',
-    code: 'HME-33',
-    title: 'Penyambungan Paip di Tanah',
-    category: 'paiping',
-    categoryLabel: 'Paiping',
-    caption: 'Sambungan paip dibuat di kawasan tanah bersebelahan lantai konkrit.',
-    imageSrc: '/images/portfolio/hme-33.webp',
-    webpSrc: '/images/portfolio/hme-33.webp',
-    status: 'Sedang Berjalan'
-  },
-  {
     id: 'paiping-34',
     code: 'HME-34',
     title: 'Paip Dalam Laluan Tanah',
@@ -573,17 +562,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     caption: 'Paip biru diletakkan dalam laluan tanah di tepi jalan kediaman.',
     imageSrc: '/images/portfolio/hme-34.webp',
     webpSrc: '/images/portfolio/hme-34.webp',
-    status: 'Sedang Berjalan'
-  },
-  {
-    id: 'wayering-35',
-    code: 'HME-35',
-    title: 'Laluan Konduit di Siling',
-    category: 'wayering',
-    categoryLabel: 'Wayering',
-    caption: 'Konduit dipasang pada siling ruang dalaman berhampiran kipas dan lampu.',
-    imageSrc: '/images/portfolio/hme-35.webp',
-    webpSrc: '/images/portfolio/hme-35.webp',
     status: 'Sedang Berjalan'
   },
   {
@@ -629,10 +607,98 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     imageSrc: '/images/portfolio/hme-39.webp',
     webpSrc: '/images/portfolio/hme-39.webp',
     status: 'Siap'
+  },
+  {
+    id: 'meter-air-40',
+    code: 'HME-40',
+    title: 'Tapak Meter Air Siap Dipasang',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Meter air dan sambungan paip dipasang pada tapak konkrit di kawasan berumput.',
+    imageSrc: '/images/portfolio/hme-40.webp',
+    webpSrc: '/images/portfolio/hme-40.webp',
+    status: 'Siap'
+  },
+  {
+    id: 'meter-air-41',
+    code: 'HME-41',
+    title: 'Kerja Lubang Meter Air',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Pekerja berada di dalam lubang tanah untuk menyediakan laluan sambungan paip meter air.',
+    imageSrc: '/images/portfolio/hme-41.webp',
+    webpSrc: '/images/portfolio/hme-41.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'meter-air-42',
+    code: 'HME-42',
+    title: 'Sambungan Paip Dalam Parit',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Paip biru kelihatan dalam parit tanah sebagai sebahagian kerja laluan meter air.',
+    imageSrc: '/images/portfolio/hme-42.webp',
+    webpSrc: '/images/portfolio/hme-42.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'meter-air-43',
+    code: 'HME-43',
+    title: 'Laluan Paip Air Merentasi Halaman',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Paip air diletakkan melalui laluan tanah merentasi kawasan halaman rumah.',
+    imageSrc: '/images/portfolio/hme-43.webp',
+    webpSrc: '/images/portfolio/hme-43.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'meter-air-44',
+    code: 'HME-44',
+    title: 'Laluan Paip Air ke Jalan',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Paip air disusun dari kawasan tanah ke bahagian tepi jalan sebelum kemasan semula.',
+    imageSrc: '/images/portfolio/hme-44.webp',
+    webpSrc: '/images/portfolio/hme-44.webp',
+    status: 'Sedang Berjalan'
+  },
+  {
+    id: 'meter-air-45',
+    code: 'HME-45',
+    title: 'Kemasan Laluan Paip di Jalan',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Laluan paip merentasi permukaan jalan telah ditutup semula dengan tampalan tar.',
+    imageSrc: '/images/portfolio/hme-45.webp',
+    webpSrc: '/images/portfolio/hme-45.webp',
+    status: 'Siap'
+  },
+  {
+    id: 'meter-air-46',
+    code: 'HME-46',
+    title: 'Tapak Meter Air di Tepi Parit',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Tapak konkrit dan sambungan meter air dipasang berhampiran pokok dan tepi parit.',
+    imageSrc: '/images/portfolio/hme-46.webp',
+    webpSrc: '/images/portfolio/hme-46.webp',
+    status: 'Siap'
+  },
+  {
+    id: 'meter-air-47',
+    code: 'HME-47',
+    title: 'Meter Air Dalam Lubang Tanah',
+    category: 'meter-air',
+    categoryLabel: 'Pemasangan Meter Air',
+    caption: 'Meter air dan paip hitam kelihatan dalam lubang tanah sebelum penutupan semula.',
+    imageSrc: '/images/portfolio/hme-47.webp',
+    webpSrc: '/images/portfolio/hme-47.webp',
+    status: 'Sedang Berjalan'
   }
 ];
 
-export const ORDERED_PORTFOLIO_ITEMS: PortfolioItem[] = [...PORTFOLIO_ITEMS].sort((a, b) => {
+const SORTED_PORTFOLIO_ITEMS: PortfolioItem[] = [...PORTFOLIO_ITEMS].sort((a, b) => {
   const statusOrder: Record<PortfolioItem['status'], number> = {
     'Sedang Berjalan': 0,
     Siap: 1,
@@ -645,6 +711,43 @@ export const ORDERED_PORTFOLIO_ITEMS: PortfolioItem[] = [...PORTFOLIO_ITEMS].sor
   const bNumber = Number(b.code.replace(/\D/g, '')) || 0;
   return bNumber - aNumber;
 });
+
+const PORTFOLIO_CATEGORY_ORDER: ServiceCategory[] = [
+  'bumbung',
+  'meter-air',
+  'paiping',
+  'wayering',
+  'jalan',
+  'meter-elektrik',
+  'besi',
+  'dapur',
+  'cat',
+  'longkang',
+];
+
+export const ORDERED_PORTFOLIO_ITEMS: PortfolioItem[] = (() => {
+  const grouped = new Map<ServiceCategory, PortfolioItem[]>();
+  for (const item of SORTED_PORTFOLIO_ITEMS) {
+    const existing = grouped.get(item.category) ?? [];
+    existing.push(item);
+    grouped.set(item.category, existing);
+  }
+
+  const ordered: PortfolioItem[] = [];
+  let added = true;
+  while (added) {
+    added = false;
+    for (const category of PORTFOLIO_CATEGORY_ORDER) {
+      const next = grouped.get(category)?.shift();
+      if (next) {
+        ordered.push(next);
+        added = true;
+      }
+    }
+  }
+
+  return ordered;
+})();
 
 export const WORK_PROCESS_STEPS = [
   {

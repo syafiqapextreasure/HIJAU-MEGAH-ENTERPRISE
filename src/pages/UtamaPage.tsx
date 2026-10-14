@@ -123,7 +123,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                   <img
                     src="/images/servis/servis-bumbung.webp"
                     alt="Kerja pemasangan bumbung logam merah kemas di tapak kediaman Malaysia"
-                    className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-[60%_72%] group-hover:scale-102 transition-transform duration-500"
+                    className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-[42%_28%] group-hover:scale-102 transition-transform duration-500"
                     width={800}
                     height={600}
                     loading="eager"
@@ -231,7 +231,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
               Servis Utama HME
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mt-2 max-w-2xl">
-              Penyelesaian kerja binaan, pembaikan, meter, air, elektrik, wiring dan piping untuk kediaman dan premis anda.
+              Penyelesaian kerja binaan, pembaikan, meter air, meter elektrik, paiping dan wayering untuk kediaman dan premis anda.
             </p>
           </div>
 
