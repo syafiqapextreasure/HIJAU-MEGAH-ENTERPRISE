@@ -123,7 +123,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                   <img
                     src="/images/servis/servis-bumbung.webp"
                     alt="Kerja pemasangan bumbung logam merah kemas di tapak kediaman Malaysia"
-                    className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                    className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-[60%_72%] group-hover:scale-102 transition-transform duration-500"
                     width={800}
                     height={600}
                     loading="eager"

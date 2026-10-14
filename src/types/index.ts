@@ -17,7 +17,9 @@ export type ServiceCategory =
   | 'air-elektrik'
   | 'meter-air'
   | 'meter-elektrik'
-  | 'wiring-piping';
+  | 'wiring-piping'
+  | 'paiping'
+  | 'wayering';
 
 export interface ServiceItem {
   id: ServiceCategory;
