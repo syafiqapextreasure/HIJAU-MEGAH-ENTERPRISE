@@ -25,8 +25,12 @@ interface UtamaPageProps {
 }
 
 export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox }) => {
-  // Selected original project photos for the home preview
-  const previewPhotos = ORDERED_PORTFOLIO_ITEMS.slice(0, 6);
+  // Selected completed, full-width project photos for the home preview.
+  // Keep this section showcase-focused instead of using narrow/deadspace thumbnails.
+  const landingPreviewCodes = ['HME-28', 'HME-14', 'HME-05', 'HME-37', 'HME-39', 'HME-13'];
+  const previewPhotos = landingPreviewCodes
+    .map((code) => ORDERED_PORTFOLIO_ITEMS.find((photo) => photo.code === code))
+    .filter((photo): photo is (typeof ORDERED_PORTFOLIO_ITEMS)[number] => Boolean(photo));
 
   const scrollToEnquiry = () => {
     const el = document.getElementById('borang-sebut-harga');
@@ -437,7 +441,7 @@ export const UtamaPage: React.FC<UtamaPageProps> = ({ onNavigate, onOpenLightbox
                 Galeri Projek Sebenar HME
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mt-1 max-w-2xl">
-                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur, longkang, pemasangan meter air, pemasangan meter elektrik, wiring dan piping.
+                Sorotan daripada {ORDERED_PORTFOLIO_ITEMS.length} foto kerja-kerja sebenar di tapak merangkumi bumbung, jalan tar, kimpalan, cat, dapur, longkang, pemasangan meter air, pemasangan meter elektrik, paiping dan wayering.
               </p>
             </div>
 
